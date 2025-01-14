@@ -17,7 +17,7 @@ function App() {
         setError('');
 
         try {
-            const response = await axios.post("http://localhost:5000/generate-outline", { title });
+            const response = await axios.post("https://backend-one-lake-16.vercel.app/generate-outline", { title });
             setOutline(response.data.outline);
         } catch (err) {
             setError("Error generating outline. Please try again.");
@@ -35,7 +35,7 @@ function App() {
         setError('');
 
         try {
-            const response = await axios.post("http://localhost:5000/generate-content", { outline });
+            const response = await axios.post("https://backend-one-lake-16.vercel.app/generate-content", { outline });
             setContent(response.data.content);
         } catch (err) {
             setError("Error generating content. Please try again.");
